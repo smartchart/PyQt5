@@ -25,7 +25,6 @@ class FileDialog(Ui_MainWindow, QMainWindow):
             '''在下面进行文件读写及判断'''
             try:
                 if re.findall('.xls|.xlsx', file_name):
-                    print(1111)
                     self.file_text.setPlainText(str(pd.read_excel(file_name, encoding='utf8')))
                 elif re.findall('.csv', file_name):
 
